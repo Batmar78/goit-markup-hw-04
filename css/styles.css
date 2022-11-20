@@ -124,7 +124,7 @@ img {
 
 .site-nav .link,
 .contact-list .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -140,9 +140,11 @@ img {
 
 .mail-icon,
 .tel-icon {
+  display: inline-flex;
   margin-right: 10px;
   fill: currentColor;
   background-size: contain;
+  align-items: center;
 }
 
 .mail-icon:hover,
@@ -209,6 +211,7 @@ img {
 .contact-item {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* HERO */
@@ -291,6 +294,7 @@ img {
 
 .features-item > .thumb {
   display: flex;
+  height: 120px;
   background-color: var(--alt-background-color);
   border-radius: 4px;
   margin-bottom: 30px;
@@ -372,11 +376,14 @@ img {
 
 .social-networks {
   display: flex;
-  padding-left: 17px;
-  padding-right: 17px;
+  padding: 0px;
   margin: 0;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
+}
+
+.social-networks .social-networks-list + .social-networks-list {
+  margin-left: 10px;
 }
 
 .link-social-networks {
@@ -406,6 +413,18 @@ img {
   justify-content: space-between;
 }
 
+.klient-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+
+  color: var(--social-network-color);
+  border: 1px solid var(--social-network-color);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
 .klient > .thumb {
   display: flex;
   width: 170px;
@@ -429,8 +448,8 @@ img {
   margin-left: 30px;
 }
 
-.klient > .thumb:hover,
-.klient > .thumb:focus {
+.klient-link:hover,
+.klient-link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
 }
@@ -446,6 +465,7 @@ img {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer .link-logo {
@@ -500,7 +520,7 @@ img {
 }
 
 .social {
-  padding-top: 12px;
+  margin-top: 12px;
   margin-left: 70px;
 }
 
@@ -516,11 +536,13 @@ img {
 
 .social > .social-networks {
   display: flex;
-  min-width: 206px;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
   list-style: none;
+}
+
+.social-networks .social-networks-item + .social-networks-item {
+  margin-left: 10px;
 }
 
 .social .link-social-networks {
@@ -643,6 +665,7 @@ img {
 
 .portfolio-link {
   text-decoration: none;
+  background-color: var(--primary-white-color);
 }
 
 .portfolio-list:hover {
